@@ -1,0 +1,9 @@
+config.py
+vps_credentials.txt
+*.session
+*.pyc
+__pycache__/
+.env
+venv/
+env/
+*.log
