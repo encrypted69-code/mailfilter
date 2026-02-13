@@ -13,7 +13,7 @@ MAIL_BOT_USERNAME = "@fakemailbot"  # Username of the bot that sends you emails
 TEST_BOT_USERNAME = "@userinfobot"  # Any bot you want to use for testing
 
 # Monitor both bots
-MONITORED_BOTS = [MAIL_BOT_USERNAME, TEST_BOT_USERNAME, "@testiggnnngigbot", "@IndoIgMail_bot"]
+MONITORED_BOTS = [MAIL_BOT_USERNAME, TEST_BOT_USERNAME, "@testiggnnngigbot", "@IndoIgMail_bot", "@cskmailbot"]
 
 # Filter Settings
 FILTER_KEYWORD = "Instagram Ads Team"  # Filter messages containing this keyword

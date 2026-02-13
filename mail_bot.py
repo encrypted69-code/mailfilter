@@ -219,14 +219,20 @@ class MailFilterBot:
         
         # Get mail bot entities
         mail_bots = []
-        try:
-            for bot_username in MONITORED_BOTS:
+        for bot_username in MONITORED_BOTS:
+            try:
                 bot_entity = await self.client.get_entity(bot_username)
                 mail_bots.append(bot_entity)
-                logger.info(f"Monitoring: {bot_username}")
-        except Exception as e:
-            logger.error(f"Failed to get bot entities: {e}")
+                logger.info(f"Successfully monitoring: {bot_username}")
+            except Exception as e:
+                logger.error(f"Failed to get bot entity for {bot_username}: {e}")
+                logger.warning(f"Skipping {bot_username} and continuing with other bots...")
+        
+        if not mail_bots:
+            logger.error("No bots could be loaded for monitoring")
             return False
+        
+        logger.info(f"Total bots being monitored: {len(mail_bots)}")
         
         # Register message handler for all monitored bots
         @self.client.on(events.NewMessage(chats=mail_bots))

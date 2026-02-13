@@ -38,7 +38,7 @@ MAIL_BOT_USERNAME = "@fakemailbot"
 TEST_BOT_USERNAME = "@userinfobot"
 
 # Monitor all bots
-MONITORED_BOTS = [MAIL_BOT_USERNAME, TEST_BOT_USERNAME, "@testiggnnngigbot"]
+MONITORED_BOTS = [MAIL_BOT_USERNAME, TEST_BOT_USERNAME, "@testiggnnngigbot", "@IndoIgMail_bot", "@cskmailbot"]
 
 # Filter Settings
 FILTER_KEYWORD = "Instagram Ads Team"

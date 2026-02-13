@@ -1,4 +1,4 @@
-@echo off
+    @echo off
 echo ================================================
 echo  VPS Deployment - Indo Mail Bot
 echo ================================================
